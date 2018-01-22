@@ -4,6 +4,7 @@ import org.hibernate.LazyInitializationException;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Date;
 
@@ -15,6 +16,7 @@ public class JPATest extends AbstractTest {
     @Test
     public void testNewUser() {
 
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("tutorialPU");
         EntityManager entityManager = Persistence.createEntityManagerFactory("tutorialPU").createEntityManager();
 
         entityManager.getTransaction().begin();

@@ -5,7 +5,7 @@
 			 version="1.0">
 
 	<persistence-unit name="tutorialPU" transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<!-- the JNDI data source -->
 		<non-jta-data-source>java:comp/env/jdbc/tutorialDS</non-jta-data-source>
 		<properties>
@@ -23,7 +23,7 @@
 		</properties>
 	</persistence-unit>
 	<persistence-unit name="serverWithPW">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.apache.jdbc.EmbeddedDriver"/>
 			<property name="javax.persistence.url" value="jdb:derby://localhost:1527/Test01;create=true"/>
