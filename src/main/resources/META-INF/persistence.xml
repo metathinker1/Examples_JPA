@@ -22,4 +22,16 @@
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
+	<persistence-unit name="serverWithPW">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.jdbc.EmbeddedDriver"/>
+			<property name="javax.persistence.url" value="jdb:derby://localhost:1527/Test01;create=true"/>
+			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.password" value="password"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+			<property name="show_sql" value="true"/>
+			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+		</properties>
+	</persistence-unit>
 </persistence>
