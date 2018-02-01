@@ -15,8 +15,9 @@
 			<property name="hibernate.format_sql" value="true" />
 			<!-- since most database servers have slightly different versions of the
                 SQL, Hibernate needs you to choose a dialect so it knows the subtleties of
-                talking to that server -->
-			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
+                talking to that server
+                2018.01.25: Seems this was deprecated
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" /> -->
 			<!-- this tell Hibernate to update the DDL when it starts, very useful
                 for development, dangerous in production -->
 			<property name="hibernate.hbm2ddl.auto" value="update" />
